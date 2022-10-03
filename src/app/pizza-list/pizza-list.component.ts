@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pizza } from '.../pizza';
+import { Pizza } from '../pizza';
 
 var p = new Pizza('oui', 'non', 'bof');
 var pp = new Pizza('non', 'non', 'bof');
