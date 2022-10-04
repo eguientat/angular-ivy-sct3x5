@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Pizza } from '../../../shared/pizza';
 
 @Component({
@@ -7,7 +7,7 @@ import { Pizza } from '../../../shared/pizza';
   styleUrls: ['./pizza-list.component.css'],
 })
 export class PizzaListComponent implements OnInit {
-  public pizzas: Pizza[] = [
+  @Input() public pizza: Pizza[] = [
     new Pizza(
       'marguerite',
       '../../assets/margarita.jpg',
@@ -24,9 +24,7 @@ export class PizzaListComponent implements OnInit {
       "Pizza quattro formaggi Italian: est une variété de pizza dans la cuisine italienne qui est garnie d'une combinaison de quatre types de fromage"
     ),
   ];
-  constructor() {
-    var pl: Pizza[] = [];
-  }
+  constructor() {}
 
   ngOnInit() {}
 }
