@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { PizzaListComponent } from './pizza-list/pizza-list.component';
-import { PizzaDetailsComponent } from './pizza-details/pizza-details.component';
+import { PizzaListComponent } from './container/list/pizza-list/pizza-list.component';
+import { PizzaDetailsComponent } from './container/detail/pizza-details/pizza-details.component';
 import { HeaderComponent } from './header/header.component';
 import { HelloComponent } from './hello.component';
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pizza } from '../pizza';
+import { Pizza } from '../../../shared/pizza';
 
 @Component({
   selector: 'app-pizza-list',
@@ -7,7 +7,7 @@ import { Pizza } from '../pizza';
   styleUrls: ['./pizza-list.component.css'],
 })
 export class PizzaListComponent implements OnInit {
-  public pl: Pizza[] = [
+  public pizzas: Pizza[] = [
     new Pizza(
       'marguerite',
       '../../assets/margarita.jpg',
