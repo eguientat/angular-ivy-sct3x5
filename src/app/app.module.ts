@@ -7,7 +7,7 @@ import { PizzaListComponent } from './container/list/pizza-list/pizza-list.compo
 import { PizzaDetailsComponent } from './container/detail/pizza-details/pizza-details.component';
 import { HeaderComponent } from './header/header.component';
 import { HelloComponent } from './hello.component';
-import { DonneesComponent } from './container/donnees/donnees.component';
+import { DonneesComponent } from './container/donnees.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { Pizza } from '../../shared/pizza';
+import { Pizza } from '../shared/pizza';
 
 @Component({
   selector: 'app-donnees',
