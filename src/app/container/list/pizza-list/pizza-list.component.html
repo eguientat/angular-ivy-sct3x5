@@ -1,15 +1,20 @@
 <div class="row">
-<div class="list-group col-12" >
-<a *ngFor="let pizza of pizza" href="#" class="list-group-item list-group-item-action"> 
-{{pizza.name}}
-</a>
+  <div class="list-group col-12">
+    <a
+      *ngFor="let p of pizza"
+      href="#"
+      class="list-group-item list-group-item-action"
+    >
+      {{ p.name }}
+    </a>
+  </div>
+  <hr />
+  <div class="row">
+    <button class="btn btn-success col-12">Ajouter une Pizza</button>
+  </div>
 </div>
-<hr>
-<div class="row">
-	<button class="btn btn-success col-12">
-		
-	Ajouter une Pizza
-	</button>
 
-
-</div>
+<p>
+  The divide is the third studio album by the world-renown English singer,
+  {{ pp }}
+</p>
