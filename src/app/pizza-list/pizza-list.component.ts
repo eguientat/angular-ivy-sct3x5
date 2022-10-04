@@ -1,22 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { Pizza } from '../pizza';
 
-var p = new Pizza('oui', 'non', 'bof');
-var pp = new Pizza('non', 'non', 'bof');
-var ppp = new Pizza('pourquoi pas', 'non', 'bof');
-
 @Component({
   selector: 'app-pizza-list',
   templateUrl: './pizza-list.component.html',
   styleUrls: ['./pizza-list.component.css'],
 })
 export class PizzaListComponent implements OnInit {
-  public pl: Pizza[] = [];
+  public pl: Pizza[] = [
+    new Pizza(
+      'marguerite',
+      '../../assets/margarita.jpg',
+      "La pizza Margherita est le nom d'une spécialité culinaire traditionnelle de la ville de Naples en Italie. "
+    ),
+    new Pizza(
+      'Mex',
+      '../../assets/mex.jpg',
+      'a pizza Tex-Mex, un savant mélange de ...'
+    ),
+    new Pizza(
+      '4 Fromages',
+      '../../assets/fromage.jpg',
+      "Pizza quattro formaggi Italian: est une variété de pizza dans la cuisine italienne qui est garnie d'une combinaison de quatre types de fromage"
+    ),
+  ];
   constructor() {
     var pl: Pizza[] = [];
-    this.pl.push(p);
-    this.pl.push(pp);
-    this.pl.push(ppp);
   }
 
   ngOnInit() {}

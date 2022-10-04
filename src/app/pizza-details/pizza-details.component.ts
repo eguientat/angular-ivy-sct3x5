@@ -7,7 +7,11 @@ import { Pizza } from '../pizza';
   styleUrls: ['./pizza-details.component.css'],
 })
 export class PizzaDetailsComponent implements OnInit {
-  pp = new Pizza('oui', 'non', 'bof');
+  public pizza = new Pizza(
+    'Mex',
+    '../../assets/mex.jpg',
+    'a pizza Tex-Mex, un savant mélange de ...'
+  );
 
   constructor() {}
 
