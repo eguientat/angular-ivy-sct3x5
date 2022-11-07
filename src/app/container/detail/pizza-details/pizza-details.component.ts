@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Pizza } from '../../../shared/pizza';
+import { Pizza } from '../../../shared/models/pizza';
+import { PizzaService } from '../../../shared/services/pizza.service';
 
 @Component({
   selector: 'app-pizza-details',

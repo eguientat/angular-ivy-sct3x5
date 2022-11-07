@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import {StyleDirective} from './shared/directives/style.directive';
 
 @Component({
   selector: 'my-app',

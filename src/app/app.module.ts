@@ -9,6 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { HelloComponent } from './hello.component';
 import { DonneesComponent } from './container/donnees.component';
 
+import { StyleDirective } from './shared/directives/style.directive';
+
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [
@@ -18,6 +20,7 @@ import { DonneesComponent } from './container/donnees.component';
     PizzaDetailsComponent,
     HeaderComponent,
     DonneesComponent,
+    StyleDirective,
   ],
   bootstrap: [
     AppComponent,
