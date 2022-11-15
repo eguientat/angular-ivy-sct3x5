@@ -7,14 +7,10 @@
       alt="#"
     />
     <div>
-      <h3 class="col-8">{{ pizza.name }}</h3>
-    </div>
-
-    <div class="row">
-      <p class="col-12">{{ pizza.desc }}</p>
+      <p *NgFor="let i of pizza.ingredient">{{ i.name }}</p>
     </div>
     <div class="row">
-      <button class="btn btn-success">Editer</button>
+      <button class="btn btn-success">Ajouter au Panier</button>
     </div>
   </div>
 </div>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { AppRouting } from './route.module';
 
 import { AppComponent } from './app.component';
 import { PizzaListComponent } from './container/list/pizza-list/pizza-list.component';
@@ -12,7 +13,7 @@ import { DonneesComponent } from './container/donnees.component';
 import { StyleDirective } from './shared/directives/style.directive';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRouting],
   declarations: [
     AppComponent,
     HelloComponent,

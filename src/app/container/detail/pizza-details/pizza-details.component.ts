@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pizza } from '../../../shared/models/pizza';
+import { Ingredient } from '../../../shared/models/ingredient';
 import { PizzaService } from '../../../shared/services/pizza.service';
 
 @Component({
@@ -13,6 +14,7 @@ export class PizzaDetailsComponent implements OnInit {
     '../../assets/mex.jpg',
     'a pizza Tex-Mex, un savant mélange de ...'
   );
+  public ingredient= new Ingredient("oui",4);
 
   constructor() {}
 
