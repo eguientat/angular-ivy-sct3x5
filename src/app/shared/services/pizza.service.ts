@@ -1,15 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Pizza } from '../models/pizza';
 import { Ingredient } from '../models/ingredient';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class PizzaService {
-  public panier: Pizza[] = [];
-  public pp: Ingredient[] = [];
+  public panier: BehaviorSubject<Ingredient[]> = new BehaviorSubject([]);
 
   constructor() {}
 
-  add(ppizza: Pizza) {
-    this.panier.push(ppizza);
+  addIngredients(ingredients: Ingredient[]): void {
+    const currentValue = this.panier.value;
+    if (currentValue && currentValue.length) {
+      this.panier.next(currentValue.concat(ingredients));
+    } else {
+      this.panier.next(ingredients);
+    }
   }
 }

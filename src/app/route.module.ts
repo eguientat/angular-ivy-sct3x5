@@ -11,3 +11,9 @@ const APP_ROUTE: Route[] = [
 ];
 
 export const AppRouting = RouterModule.forRoot(APP_ROUTE);
+
+@NgModule({
+  imports: [RouterModule],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}
