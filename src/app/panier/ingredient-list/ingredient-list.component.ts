@@ -1,20 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Pizza } from '../../shared/models/pizza';
 import { Ingredient } from '../../shared/models/ingredient';
+import { PizzaService } from '../../shared/services/pizza.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-ingredient-list',
   templateUrl: './ingredient-list.component.html',
   styleUrls: ['./ingredient-list.component.css'],
 })
-export class IngredientListComponent implements OnInit {
-  public ingredients: Ingredient[] = [
-    new Ingredient('tomate', 4),
-    new Ingredient('Bacon', 2),
-    new Ingredient('Fromage', 6),
-  ];
+export class IngredientListComponent implements OnInit, OnDestroy {
+  public ingredients: Ingredient[] = [];
+  private subscribtion: Subscription;
 
-  constructor() {}
+  constructor(private pizzaService: PizzaService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.subscribtion = this.pizzaService.panier.subscribe(
+      (ingredients: Ingredient[]) => {
+        this.ingredients = ingredients;
+      }
+    );
+  }
+
+  ngOnDestroy() {
+    this.subscribtion.unsubscribe();
+  }
 }

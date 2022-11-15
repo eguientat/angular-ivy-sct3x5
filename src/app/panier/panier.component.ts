@@ -11,7 +11,7 @@ import { Pizza } from '../shared/models/pizza';
 })
 export class PanierComponent implements OnInit {
   public p: PizzaService;
-  public pizza: Pizza[];
+  public pizza: Pizza;
   constructor() {}
 
   ngOnInit() {}
